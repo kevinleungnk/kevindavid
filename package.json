@@ -1,0 +1,21 @@
+{
+    "name": "NodejsStarterApp",
+    "description": "NodeJS Session",
+    "author": "Raymond SO <rso@ouhk.edu.hk>",
+    "version": "0.0.1",
+    "dependencies": {
+		"mongodb": "*",
+		"cfenv": "1.0.x",
+		"mongodb-core":"*",
+        "express": "4.13.x",
+        "ejs": "*",
+		"body-parser": "*",
+		"cookie-session": "*",
+		"express-fileupload": "*"
+    },
+    "engine": {"node": "4.x"},
+    "scripts": {"start": "node app.js"}
+
+
+
+}

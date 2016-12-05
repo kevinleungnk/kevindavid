@@ -1,0 +1,22 @@
+<html>
+<title>Rate </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./stylesheets/w3.css">
+<body>
+<script>
+function goBack() {window.history.back();}
+</script>
+<div class="w3-container w3-teal">
+  <h2>Rate </h2>
+</div>
+<p>
+<form class="w3-container" acton="/rate" method="post">
+  <input type="hidden" name="userid" value=<%= userid %>>
+  <label>Score (1-10):</label>
+  <input class="w3-input" type="number" name="score" min=1 max=10>
+  <button class="w3-btn w3-section w3-teal w3-ripple">Rate</button>
+  <button class="w3-btn w3-section w3-teal w3-ripple" onclick="goBack()">Go Back</button>
+</form>
+</p
+</body>
+</html>

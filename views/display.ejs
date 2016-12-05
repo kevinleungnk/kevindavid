@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title><%= dr.name %></title>
+<link rel="stylesheet" href="./stylesheets/w3.css">
+
+</head>
+<body>
+
+<script>
+function goBack() {window.history.back();}
+
+function reMove(i) {
+    if (confirm("Remove this restaurant?") == true) {
+        window.location.href = "/remove?_id=" + i
+    }
+}
+
+</script>
+
+<div class="w3-container w3-teal">
+  <h1><%= dr.name %></h1>
+</div>
+
+<% if(dr.data.length != 0){ %>
+<img src="data: <%=dr.mimetype%>;base64, <%=dr.data%>" class="w3-image w3-border w3-padding" style="width:100%"><br/>
+<% } %>
+
+<div class="w3-container">
+<p>
+<label class="w3-label w3-validate">Borough: </label><%= dr.borough %></p>
+<label class="w3-label w3-validate">Cuisine: </label><%= dr.cuisine %></p>
+<label class="w3-label w3-validate">Street: </label><%= dr.address.street %><p>
+<label class="w3-label w3-validate">Building: </label><%= dr.address.building %></p>
+<label class="w3-label w3-validate">Zipcode: </label><%= dr.address.zipcode %></p>
+<label class="w3-label w3-validate">GPS: </label><%= dr.address.coord %></p>
+<label class="w3-label w3-validate">Rating: </label></p>
+
+<ol>
+  <% dr.grades.forEach(function(rest) { %>
+  <li><%= rest.score %> (<%= rest.userid %>)</li>
+  <% }); %>
+</ol>
+
+<p>
+<label class="w3-label w3-validate">Created by: </label><%= dr.userid %></p>
+<p>
+
+</div>
+
+ <a href="/showonmap?_id=<%= dr._id%>">Google Map</a>
+
+<div class="w3-container">
+
+<a href="/rate?_id=<%= dr._id %>" style="text-decoration: none">
+    <button class="w3-btn w3-section w3-teal w3-ripple">Rate</button>
+</a>
+
+<a href="/change?_id=<%= dr._id %>" style="text-decoration: none">
+  <button class="w3-btn w3-section w3-teal w3-ripple">Change</button>
+</a>
+
+<a href="/remove?_id=<%= dr._id %>" style="text-decoration: none">
+  <button class="w3-btn w3-section w3-teal w3-ripple">Remove</button>
+</a>
+  
+<button class="w3-btn w3-section w3-teal w3-ripple" onclick="goBack()">Go Back</button>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./stylesheets/w3.css">
+</head>
+<body>
+<header class="w3-container w3-teal">
+  <h1>Restaurants</h1>
+  
+    <p>User: <%= userid %></p>
+
+  
+  <p>Showing <%= r.length %> documents
+  (criteria: <%= criteria %>)</p>
+</header>
+<div class="w3-container">
+<a href="/create" style="text-decoration: none">
+  <button class="w3-btn">New</button>
+</a>
+<a href="/logout" style="text-decoration: none">
+  <button class="w3-btn">Logout</button>
+</a>
+</div>
+<br>
+<div class="w3-container">
+  <ul class="w3-ul w3-large">
+  
+<ol>
+  <% r.forEach(function(rest) { %>
+  <li><a href=/display?_id=<%= rest._id %>><%= rest.name %></a></li>
+  <% });                        %>
+<ol>
+  
+  </ul>
+</div>
+<p>
+
+</body>
+</html>

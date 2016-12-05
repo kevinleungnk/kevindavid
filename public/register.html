@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://projdemo.mybluemix.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./stylesheets/w3.css">
+</head><body>
+
+<script>
+function goLogin() {window.location.href = "/login";}
+</script>
+
+<header class="w3-container w3-teal">
+  <h1>Register</h1>
+</header>
+
+<div class="w3-container w3-half w3-margin-top">
+
+<form action="/register" method="post" class="w3-container w3-card-4">
+  <p>
+  <input name="userid" class="w3-input" type="text" style="width:90%" required="">
+  <label class="w3-label w3-validate">Name</label></p>
+  <p>
+  <input name="password" class="w3-input" type="password" style="width:90%" required="">
+  <label class="w3-label w3-validate">Password</label></p>
+  <p>
+  <input name="conpassword" class="w3-input" type="password" style="width:90%" required="">
+  <label class="w3-label w3-validate">Confirm Password</label></p>
+  <p>
+  <button class="w3-btn w3-section w3-teal w3-ripple"> Register </button>
+  <button class="w3-btn w3-section w3-teal w3-ripple" onclick="goLogin()">Go Login</button>
+  </p>
+</form>
+
+</div>
+
+<!--
+<html>
+<body>
+<form action="/processlogin" method="get">
+User ID: <input type="text" name="id" />
+Password: <input type="password" name="password" />
+<br><br>
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
+-->
+</body></html>

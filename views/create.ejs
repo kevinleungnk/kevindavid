@@ -1,0 +1,49 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Create New Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./stylesheets/w3.css">
+</head><body>
+<script>
+function goBack() {window.history.back();}
+</script>
+<div class="w3-container w3-teal">
+  <h1>Create New Restaurant</h1>
+</div>
+
+<form action="/create" method="post" enctype="multipart/form-data" class="w3-container" style="width:100%">  
+  <input type="hidden" name="userid" value=<%= userid %>>
+  <p>
+  <input name="name" class="w3-input" type="text" required="">
+  <label class="w3-label w3-validate">Name</label></p>
+  <p>
+  <input name="borough" class="w3-input" type="text">
+  <label class="w3-label w3-validate">Borough</label></p>
+  <p>
+  <input name="cuisine" class="w3-input" type="text">
+  <label class="w3-label w3-validate">Cuisine</label></p>
+  <p>
+  <input name="street" class="w3-input" type="text">
+  <label class="w3-label w3-validate">Street</label></p>
+  <p>
+  </p><p>
+  <input name="building" class="w3-input" type="text">
+  <label class="w3-label w3-validate">Building</label></p>
+  <p>
+  </p><p>
+  <input name="zipcode" class="w3-input" type="text">
+  <label class="w3-label w3-validate">Zipcode</label></p>
+  <p>
+  </p><p>
+  <input name="lon" class="w3-input" type="text">
+  <label class="w3-label w3-validate">GPS Coordinates (lon.)</label></p>
+  <p>
+  <input name="lat" class="w3-input" type="text">
+  <label class="w3-label w3-validate">GPS Coordinates (lat.)</label></p>
+  <p>
+  <input name="sampleFile" class="w3-input" type="file">
+  <label class="w3-label w3-validate">Photo</label></p>
+  <p>
+  <button class="w3-btn w3-section w3-teal w3-ripple"> Create </button> <button class="w3-btn w3-section w3-teal w3-ripple" onclick="goBack()">Go Back</button></p>
+</form>
+
+</body></html>
